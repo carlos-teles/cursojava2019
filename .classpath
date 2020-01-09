@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="01_HelloWorld/src"/>
+	<classpathentry kind="src" path="02_ExemploGui/src"/>
+	<classpathentry kind="src" path="03_ExemploNew/src"/>
+	<classpathentry kind="src" path="04_ClassesEObjetos/src"/>
+	<classpathentry kind="src" path="05_TiposPrimitivos/src"/>
+	<classpathentry kind="src" path="06_TypeCast/src"/>
+	<classpathentry kind="src" path="07_Metodo/src"/>
+	<classpathentry kind="src" path="08_ExemploGetSet/src"/>
+	<classpathentry kind="src" path="09_EntradaDeDados/src"/>
+	<classpathentry kind="src" path="10_AlgoritmosJava/src"/>
+	<classpathentry kind="output" path="01_HelloWorld/bin"/>
+</classpath>
