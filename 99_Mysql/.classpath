@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Aluno/git/cursojava2019/99_Mysql/ormlite-core-5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Aluno/git/cursojava2019/99_Mysql/ormlite-jdbc-5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Aluno/git/cursojava2019/99_Mysql/junit-4.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Aluno/git/cursojava2019/99_Mysql/mysql-connector-java-8.0.19.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
