@@ -1,6 +1,6 @@
 package model;
 
-public class Professor extends Usuario {
+public class Professor extends Usuario implements IUsuario {
 	private String nome ;
 	private String especialidade;
 	private int matriculaProfessor;
@@ -63,4 +63,14 @@ public class Professor extends Usuario {
 		System.out.println("Nome: " + nome);
 		System.out.println("Especialidade: " + especialidade);
 	}
+	
+	@Override
+	public boolean validarLogin(String login, String senha){
+		if( getLogin().equals(login) && getSenha().equals(senha)  )
+		{
+			return true;
+		}
+		return false;
+	}	
+	
 }
