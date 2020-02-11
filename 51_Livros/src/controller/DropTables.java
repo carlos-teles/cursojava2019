@@ -6,11 +6,10 @@ import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
-import model.Livros;
-import model.Perm;
-import model.User;
+import model.*;
 
-public class CriarDB {
+public class DropTables {
+
 	// we are using the in-memory H2 database
 	//private final static String DATABASE_URL = "jdbc:h2:mem:account";
 	private final static String DATABASE_URL = 
@@ -19,10 +18,11 @@ public class CriarDB {
 	private Dao<Livros, Integer> livrosDao;
 	private Dao<User, Integer> userDao;
 	private Dao<Perm, Integer> permDao;
+	
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		new CriarDB().doMain(args);
+		new DropTables().doMain(args);
 	}
 	private void doMain(String[] args) throws Exception {
 		ConnectionSource connectionSource = null;
@@ -49,9 +49,9 @@ public class CriarDB {
 		permDao = DaoManager.createDao(connectionSource, Perm.class);
 		
 		// if you need to create the table
-		TableUtils.createTable(connectionSource, Livros.class);
-		TableUtils.createTable(connectionSource, User.class);
-		TableUtils.createTable(connectionSource, Perm.class);
+		TableUtils.dropTable(connectionSource, Livros.class, true);
+		TableUtils.dropTable(connectionSource, User.class, true);
+		TableUtils.dropTable(connectionSource, Perm.class, true);
+		
 	}	
-	
 }
