@@ -16,6 +16,7 @@ public class Livros {
 	public static final String EDITORA_FIELD_NAME = "editora";
 	public static final String AUTOR_FIELD_NAME = "autor";
 
+
 	@DatabaseField(generatedId = true)
 	private int id;
 
@@ -44,6 +45,12 @@ public class Livros {
 	@DatabaseField(columnName = AUTOR_FIELD_NAME, canBeNull = false)
 	private String autor;
 
+
+	
+	public int getId() {
+		return id;
+	}	
+	
 	/**
 	 * @return the isbn
 	 */

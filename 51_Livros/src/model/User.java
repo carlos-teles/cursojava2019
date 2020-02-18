@@ -1,5 +1,6 @@
 package model;
 
+import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -13,7 +14,9 @@ public class User {
 	public static final String EMAIL_FIELD_NAME = "email";
 	public static final String NOME_FIELD_NAME = "nome";
 	public static final String CPF_FIELD_NAME = "cpf";
-
+	public static final String UNP_FIELD_NAME = "user_num_perm";
+	public static final String LIVROS_FIELD_NAME = "livros";
+	
 	@DatabaseField(generatedId = true)
 	private int id;
 
@@ -31,6 +34,12 @@ public class User {
 
 	@DatabaseField(columnName = CPF_FIELD_NAME, canBeNull = false, unique = true)
 	private String cpf;
+	
+	@DatabaseField(columnName = UNP_FIELD_NAME)
+	private int user_num_perm;	
+	
+	@DatabaseField(columnName = LIVROS_FIELD_NAME, canBeNull = true, dataType=DataType.SERIALIZABLE)
+	private Livros livros[] = new Livros[10];	
 
 	/**
 	 * @return the login
